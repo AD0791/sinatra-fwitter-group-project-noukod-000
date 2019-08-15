@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
 
   def slug
       self.name.gsub(" ", "-").downcase
-    end
+  end
 end
