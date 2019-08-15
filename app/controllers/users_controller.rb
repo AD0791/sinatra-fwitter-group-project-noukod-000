@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     if Helpers.is_logged_in? session
       redirect '/tweets'
     else
-      erb :"users/register"
+      erb :"users/create_user"
     end
   end
 
