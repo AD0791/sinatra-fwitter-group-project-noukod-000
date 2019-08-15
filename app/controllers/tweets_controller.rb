@@ -81,4 +81,3 @@ class TweetsController < ApplicationController
     end
   end
 end
-© 2019 Git
