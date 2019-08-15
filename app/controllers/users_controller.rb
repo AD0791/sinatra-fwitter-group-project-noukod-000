@@ -1,17 +1,16 @@
 class UsersController < ApplicationController
-
   use Rack::Flash
 
   get '/users/:slug' do
-   @user = User.find_by_slug(params[:slug])
-   erb :'users/show'
+    @user = User.find_by_slug(params[:slug])
+    erb :'users/show_tweets'
   end
-  # verify
-  get '/signup' do
+
+  get "/signup" do
     if Helpers.is_logged_in? session
       redirect '/tweets'
     else
-    erb :'users/create_user'
+      erb :"users/register"
     end
   end
 
@@ -53,4 +52,5 @@ class UsersController < ApplicationController
       redirect to '/'
     end
   end
+
 end
